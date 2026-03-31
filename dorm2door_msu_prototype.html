@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dorm 2 Door | MSU</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+    header {
+      position: sticky; top: 0; background: rgba(255,255,255,.96);
+      border-bottom: 1px solid #e2e8f0; backdrop-filter: blur(6px);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand h1 { margin: 0; font-size: 30px; }
+    .brand p { margin: 4px 0 0; color: #475569; }
+    .btn {
+      display: inline-block; padding: 12px 18px; border-radius: 16px;
+      text-decoration: none; font-weight: 700; border: 1px solid #cbd5e1;
+      background: white; color: #0f172a;
+    }
+    .btn.primary { background: #166534; color: white; border-color: #166534; }
+    .hero {
+      display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; padding: 42px 24px;
+      align-items: center;
+    }
+    .tag {
+      display: inline-block; background: #dcfce7; color: #166534;
+      padding: 8px 12px; border-radius: 999px; font-weight: 700; font-size: 14px;
+    }
+    h2 { font-size: 52px; line-height: 1.08; margin: 16px 0; }
+    .lead { font-size: 20px; line-height: 1.7; color: #475569; }
+    .stats, .features, .reviews { display: grid; gap: 16px; }
+    .stats { grid-template-columns: repeat(3, 1fr); margin-top: 24px; }
+    .card {
+      background: white; border: 1px solid #e2e8f0; border-radius: 24px; padding: 18px;
+      box-shadow: 0 10px 30px rgba(15,23,42,.05);
+    }
+    .search-box { background: white; border: 1px solid #e2e8f0; border-radius: 28px; padding: 18px; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    input {
+      width: 100%; padding: 14px 16px; border: 1px solid #cbd5e1; border-radius: 16px;
+      font-size: 15px;
+    }
+    .listing { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 22px; padding: 16px; margin-top: 14px; }
+    .row { display: flex; justify-content: space-between; gap: 12px; }
+    .muted { color: #64748b; }
+    .pill {
+      display: inline-block; padding: 7px 10px; background: white; border: 1px solid #cbd5e1;
+      border-radius: 999px; margin-right: 8px; margin-top: 10px; font-size: 14px;
+    }
+    .section { padding: 20px 24px 40px; }
+    .features { grid-template-columns: repeat(3, 1fr); }
+    .dark {
+      background: #0f172a; color: white; border-radius: 28px; padding: 28px;
+    }
+    .reviews { grid-template-columns: repeat(3, 1fr); margin-top: 18px; }
+    .review {
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.08);
+      border-radius: 20px; padding: 18px;
+    }
+    footer { background: white; border-top: 1px solid #e2e8f0; margin-top: 30px; }
+    @media (max-width: 900px) {
+      .hero, .features, .reviews, .stats { grid-template-columns: 1fr; }
+      h2 { font-size: 38px; }
+      .nav { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <h1>Dorm 2 Door</h1>
+        <p>Student housing network for MSU</p>
+      </div>
+      <div>
+        <a class="btn primary" href="#">Sign In with MSU Email</a>
+        <a class="btn" href="#">Post Listing</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container hero">
+    <section>
+      <span class="tag">Verified MSU-only platform</span>
+      <h2>Find safe, affordable housing near campus faster.</h2>
+      <p class="lead">
+        Dorm 2 Door helps Michigan State students find real listings, check live availability,
+        read peer reviews, and match with compatible roommates.
+      </p>
+      <div style="margin-top: 22px;">
+        <a class="btn primary" href="#">Explore Listings</a>
+        <a class="btn" href="#">Find a Roommate</a>
+      </div>
+
+      <div class="stats">
+        <div class="card"><strong style="font-size:28px;">100%</strong><br><span class="muted">Student verified</span></div>
+        <div class="card"><strong style="font-size:28px;">Live</strong><br><span class="muted">Availability updates</span></div>
+        <div class="card"><strong style="font-size:28px;">Peer</strong><br><span class="muted">Roommate reviews</span></div>
+      </div>
+    </section>
+
+    <section class="search-box">
+      <div class="grid2">
+        <input placeholder="Budget under..." />
+        <input placeholder="Walking distance" />
+        <input placeholder="Room type" />
+        <input placeholder="Move-in date" />
+      </div>
+      <div style="margin-top:12px;">
+        <a class="btn primary" href="#" style="display:block; text-align:center;">Search Housing</a>
+      </div>
+
+      <div class="listing">
+        <div class="row">
+          <div>
+            <strong>1 Bed near Grand River</strong><br>
+            <span class="muted">Private room • 8 min to MSU</span>
+          </div>
+          <div style="text-align:right;">
+            <strong>$780/mo</strong><br>
+            <span class="tag" style="font-size:12px;">Verified</span>
+          </div>
+        </div>
+        <span class="pill">⭐ 4.8</span>
+        <span class="pill">Quiet, clean, junior</span>
+      </div>
+
+      <div class="listing">
+        <div class="row">
+          <div>
+            <strong>2 Bed apartment in East Lansing</strong><br>
+            <span class="muted">Entire apartment • 12 min to MSU</span>
+          </div>
+          <div style="text-align:right;">
+            <strong>$1,150/mo</strong><br>
+            <span class="tag" style="font-size:12px;">Verified</span>
+          </div>
+        </div>
+        <span class="pill">⭐ 4.6</span>
+        <span class="pill">Looking for 1 roommate</span>
+      </div>
+
+      <div class="listing">
+        <div class="row">
+          <div>
+            <strong>Shared house by campus</strong><br>
+            <span class="muted">Shared room • 5 min to MSU</span>
+          </div>
+          <div style="text-align:right;">
+            <strong>$650/mo</strong><br>
+            <span class="tag" style="font-size:12px;">Verified</span>
+          </div>
+        </div>
+        <span class="pill">⭐ 4.9</span>
+        <span class="pill">Friendly senior, engineering major</span>
+      </div>
+    </section>
+  </main>
+
+  <section class="container section">
+    <div class="features">
+      <div class="card">
+        <h3>Verified Listings</h3>
+        <p class="muted">Only MSU student users can post or contact listings using school email verification.</p>
+      </div>
+      <div class="card">
+        <h3>Roommate Match</h3>
+        <p class="muted">Find people based on budget, lifestyle, sleep schedule, cleanliness, and study habits.</p>
+      </div>
+      <div class="card">
+        <h3>Real Reviews</h3>
+        <p class="muted">Students can leave feedback on listings, neighborhoods, and roommates.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="dark">
+      <h3 style="font-size:34px; margin:0 0 10px;">Why this works at MSU</h3>
+      <p style="color:#cbd5e1; line-height:1.8;">
+        East Lansing housing is competitive, scattered across many websites, and often outdated.
+        Dorm 2 Door puts the search, trust, and roommate fit in one place built for students.
+      </p>
+
+      <div class="reviews">
+        <div class="review"><strong>Amina</strong><p style="color:#cbd5e1;">Finally one place with student-only listings. It feels way safer than random Facebook posts.</p></div>
+        <div class="review"><strong>Omar</strong><p style="color:#cbd5e1;">The roommate matching part saved me so much time. I found a place in 2 days.</p></div>
+        <div class="review"><strong>Lina</strong><p style="color:#cbd5e1;">I like that verified listings show real availability instead of old posts.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container nav">
+      <div>
+        <strong>Dorm 2 Door</strong><br>
+        <span class="muted">Built as an MSU student housing prototype</span>
+      </div>
+      <a class="btn primary" href="#">Join with @msu.edu</a>
+    </div>
+  </footer>
+</body>
+</html>
